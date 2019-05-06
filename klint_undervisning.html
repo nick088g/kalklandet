@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Stevns Klint UNESCO verdensarv undervisning">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”description” content=”Oplev Kalklandet - Vi har oplevelser som rækker udover den gængse museumsoplevelse. Vi tilbyder natur- og kulturhistorie i verdensklasse, som ikke findes andre steder. Mærk, føl og oplev vores univers sammen med dine nærmeste.”>
+    <meta name="keywords" content="stevns klint,unesco,kalklandet,undervisning,verdensarv">
+    <title>Stevns Klint UNESCO verdensarv undervisning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div id="header">
+        <div class="left">
+            <a href="index.html">
+                <div class="logo">
+                </div>
+            </a>
+        </div>
+        <div class="rigth">
+            <!--
+            <div class="search">
+                <p>Søg</p>
+            </div>
+-->
+            <div class="burgermenu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="box hide">
+                <div class="ned_menu">
+                    <a href="koldkrig_besoeg.html">
+                        <div class="koldkrigsmuseet">Koldkrigsmuseum Stevnsfort</div>
+                    </a>
+                    <a href="klint_besoeg.html">
+                        <div class="stevns_klint valgt">Stevns Klint</div>
+                    </a>
+                    <a href="faxe_besoeg.html">
+                        <div class="geomuseum_faxe ">Geomuseum Faxe</div>
+                    </a>
+                    <a href="viden.html">
+                        <div class="viden">Historie</div>
+                    </a>
+                    <a href="index.html#screen">
+                        <div class="kalender_ikon">
+                        </div>
+                        <div class="kalender_tekst hide_kal">Kalender</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="splash">
+        <img src="" alt="">
+        <div class="splash_ani">
+            <div class="border_animation">
+                <a href="#">STEVNS KLINT</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu klint_menu">
+
+        <a href="klint_besoeg.html">
+            <div class="besoeg_os">Besøg os</div>
+        </a>
+        <a href="klint_priser.html">
+            <div class="priser ">Priser og guidede ture</div>
+        </a>
+        <a href="klint_undervisning.html">
+            <div class="undervisning valg">Undervisning</div>
+        </a>
+    </div>
+    <div class="overskriftklint">
+        <h1></h1>
+    </div>
+    <div class="indhold">
+    </div>
+    <div class="hold">
+        <h2>For skoler</h2><br>
+        <div class="hold_overskrift">
+            <h3></h3>
+        </div>
+        <div class="hold_indhold">
+        </div> <br>
+        <div class="hold_overskrift2">
+            <h3></h3>
+        </div>
+        <div class="hold_indhold2">
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="kontakt">
+            <div>
+                <p>Østsjællands Museum</p>
+                <p>Rådhusvej 2</p>
+                <p>4640 Faxe</p>
+                <p>museum@oesm.dk</p>
+                <p>+45 56502806</p>
+                <p>Telefontid: hverdage kl. 9-15</p>
+                <div class="some">
+                    <a href="https://www.facebook.com/stevnsklint/">
+                        <div class="facebook"></div>
+                    </a>
+                    <a href="https://www.instagram.com/oestsjaellandsmuseum/?hl=da">
+                        <div class="instagram"></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div id="om_os">
+            <h3>Om os</h3>
+            <p>Historie</p>
+            <p>Hvem er vi?</p>
+            <p>Vores opgaver</p>
+            <p>Vores resultater</p>
+            <p>Ledige stillinger</p>
+        </div>
+    </footer>
+
+    <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/klint/82";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".overskriftklint h1").innerHTML = splash.title.rendered;
+                document.querySelector(".indhold").innerHTML = splash.content.rendered;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.klint_splashbillede.guid + ")"
+            }
+
+            getJson();
+
+            async function getJson2() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/stevns_klint_hold/378";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visIndhold2();
+            }
+
+            function visIndhold2() {
+                document.querySelector(".hold_overskrift h3").innerHTML = splash.title.rendered;
+                document.querySelector(".hold_indhold").innerHTML = splash.content.rendered;
+            }
+
+            getJson2();
+
+            async function getJson3() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/stevns_klint_hold/379";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visIndhold3();
+            }
+
+            function visIndhold3() {
+                document.querySelector(".hold_overskrift2 h3").innerHTML = splash.title.rendered;
+                document.querySelector(".hold_indhold2").innerHTML = splash.content.rendered;
+            }
+
+            getJson3();
+            sidenVises();
+        }
+
+        function sidenVises() {
+            console.log("siden vises");
+            //Hvad der skal ske
+            showStart();
+        }
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu);
+
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide");
+            document.querySelector(".burgermenu").classList.toggle("change");
+            document.querySelector(".burgermenu").addEventListener("click", showStart);
+        }
+    </script>
+</body>
+
+</html>

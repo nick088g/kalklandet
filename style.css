@@ -1,0 +1,1251 @@
+/*basic*/
+*,
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+    background-color: #ded9d5;
+}
+
+
+img {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: limeStone-Regular, sans-serif;
+}
+
+a:hover {
+    color: #8d8277;
+}
+
+
+p,
+ul {
+    font-family: Arial-Regular, sans-serif;
+}
+
+h1 {
+    font-family: limeStone-Light, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: limeStone-Light, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.7rem;
+}
+
+
+h3 {
+    font-family: limeStone-Bold, sans-serif;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-family: limeStone-Bold, sans-serif;
+    padding-top: 18px;
+    padding-bottom: 10px;
+}
+
+.overskriftkold {
+    padding: 2vw 16vw 0vw 16vw;
+    background-color: white;
+    text-align: center;
+    color: #387288
+}
+
+.overskriftklint {
+    padding: 2vw 16vw 0vw 16vw;
+    background-color: white;
+    text-align: center;
+    color: #0082AD;
+}
+
+.overskriftkalk {
+    padding: 2vw 16vw 0vw 16vw;
+    background-color: white;
+    text-align: center;
+    color: #19A6A2;
+}
+
+
+
+/*------------header-----------*/
+.logo {
+    background-image: url(logo/logo_kalk3.png);
+    width: 20vw;
+    height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width:725px) {
+
+    .logo {
+        background-image: url(logo/logo_kalk3.png);
+        width: 40vw;
+        height: 40vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.left {
+    display: flex;
+}
+
+.left p {
+    text-align: center;
+}
+
+.tagline {
+    margin-top: 3vh;
+}
+
+.tagline p {
+    color: #8d8277;
+}
+
+@media only screen and (max-width:725px) {
+
+    .tagline {
+        margin-top: 2.8vw;
+    }
+}
+
+.rigth {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 2vw 2vw 1vw 2vw;
+    width: 100vw;
+    height: 40vh;
+    /*    background-color: white;*/
+}
+
+/*--------splash billede-------*/
+
+.splash {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width:725px) {
+
+    .splash_height {
+        height: 22vh;
+    }
+
+    .splash .splash_ani .border_animation a {
+        position: relative;
+        text-decoration: none;
+        width: 100vw;
+        height: 100px;
+        text-align: center;
+        /*            line-height: 50px;*/
+        display: inline-block;
+        font-size: 30px;
+        color: white;
+        top: -11vw;
+        bottom: -30vw;
+    }
+
+    .border_animation {
+        position: absolute;
+        top: 40vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 10px;
+    }
+
+    .splash .splash_ani a:before {
+        content: '';
+        position: absolute;
+        top: -29px;
+        left: -10px;
+        right: -10px;
+        bottom: 10px;
+        width: 0%;
+        height: 0%;
+        background: transparent;
+        border: 4px solid transparent;
+        animation: animate 3s linear forwards;
+    }
+}
+
+.splash_ani {
+    margin: 0;
+    padding: 0;
+    background: #8d8277;
+    font-family: Limestone, sans-serif;
+}
+
+.border_animation {
+    position: absolute;
+    top: 28vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 3vw;
+}
+
+.splash_ani a {
+    position: relative;
+    text-decoration: none;
+    width: 100vw;
+    height: 140px;
+    top: -10px;
+    text-align: center;
+    line-height: 1px;
+    display: inline-block;
+    font-size: 78px;
+    color: white;
+}
+
+.splash_ani a:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    right: -10px;
+    bottom: 10px;
+    width: 0%;
+    height: 0%;
+    background: transparent;
+    border: 4px solid transparent;
+    animation: animate 3s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: white;
+
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: white;
+        border-left-color: white;
+    }
+
+    100% {
+        width: 100%;
+        height: 50%;
+        border-top-color: white;
+        border-bottom-color: white;
+
+    }
+}
+
+@media only screen and (min-width:725px) {
+
+    .splash_ani_kk {
+        margin: 0;
+        padding: 0;
+        background: #8d8277;
+        font-family: Limestone, sans-serif;
+    }
+
+    .border_animation_kk {
+        position: absolute;
+        top: 28vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 3vw;
+    }
+
+    .splash_ani_kk a {
+        position: relative;
+        text-decoration: none;
+        width: 100vw;
+        height: 140px;
+        top: -10px;
+        text-align: center;
+        line-height: 1px;
+        display: inline-block;
+        font-size: 66px;
+        color: white;
+    }
+
+    .splash_ani_kk a:before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: -10px;
+        right: -10px;
+        bottom: 10px;
+        width: 0%;
+        height: 0%;
+        background: transparent;
+        border: 4px solid transparent;
+        animation: animate 3s linear forwards;
+    }
+}
+
+@media only screen and (max-width:725px) {
+
+    .splash .splash_ani_kk .border_animation_kk a {
+        position: relative;
+        text-decoration: none;
+        width: 100vw;
+        height: 145px;
+        text-align: center;
+        display: inline-block;
+        font-size: 30px;
+        color: white;
+        top: -22vw;
+        bottom: -30vw;
+    }
+
+    .border_animation_kk {
+        position: absolute;
+        top: 30vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 10px;
+    }
+
+    .splash .splash_ani_kk a:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -10px;
+        right: -10px;
+        bottom: 10px;
+        width: 0%;
+        height: 0%;
+        background: transparent;
+        border: 4px solid transparent;
+        animation: animate 3s linear forwards;
+    }
+}
+
+/*-------burgermenu--------*/
+
+
+.ned_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.ned_menu a {
+    font-size: 1.3rem;
+    padding-right: 1.2rem;
+    text-decoration: none;
+    color: white;
+    margin-top: 3vh;
+}
+
+.kalender_ikon {
+    background-image: url(logo/kalender_ikon.svg);
+    display: flex;
+    flex-wrap: wrap;
+    width: 4vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.kalender_ikon:hover {
+    background-image: url(logo/kalender_ikon_hover.svg);
+    display: flex;
+    flex-wrap: wrap;
+    width: 4vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hide_kal {
+    display: none
+}
+
+@media only screen and (max-width:820px) {
+
+    .hide {
+        display: none;
+    }
+
+    /*denne funktion gemmer burgermenuens box inden tryk*/
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        /*De 3 linjer til burgermenuen bliver her defineret*/
+        display: flex;
+        flex-wrap: wrap;
+        width: 35px;
+        height: 5px;
+        background-color: #8d8277;
+        margin: 6px 0;
+        transition: 0.4s;
+
+    }
+
+    .change .bar1 {
+        /*Her roterer vi linje1 og flytter den med translate */
+        transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+
+    .change .bar2 {
+        /*linje 2 bliver gennemsigtig */
+        opacity: 0;
+    }
+
+
+    .change .bar3 {
+        /*Her roterer vi linje3 og flytter den med translate */
+        transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .box {
+        /*Boksen som linksene ligger i */
+        height: 195px;
+        width: 200px;
+        background-color: rgba(222, 217, 213, 0.97);
+        z-index: 1;
+    }
+
+    .burgermenu {
+        cursor: pointer;
+        margin-left: 165px;
+    }
+
+    .ned_menu {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+    }
+
+    .ned_menu a {
+        font-size: 1.1rem;
+        margin: 0.25rem;
+        padding: 0.15rem;
+        text-decoration: none;
+        color: #776C60;
+    }
+
+    .kalender_container {
+        display: flex;
+        flex-basis: 200px;
+    }
+
+    .kalender_ikon {
+        background-image: url(logo/kalender_ikon.svg);
+        display: flex;
+        flex-wrap: wrap;
+        width: 12vw;
+        height: vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        flex-basis: 1;
+    }
+
+    .kalender_p {
+        flex-basis: 1;
+    }
+
+    .ned_menu .kalender_ikon a {
+        margin: 0vw;
+    }
+
+    .kalender_ikon {
+        display: none;
+    }
+
+    .hide_kal {
+        display: block;
+    }
+}
+
+/*----------hovedmenu---------*/
+
+.container {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+
+    display: block;
+    width: 100%;
+    height: 75%;
+    transition: 1.3s ease;
+    /*    backface-visibility: hidden;*/
+
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.container:hover {
+    text-align: center;
+    background-color: white;
+}
+
+.koldkrig {
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    border: solid #ded9d5 8px;
+}
+
+.klint {
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    border: solid #ded9d5 8px;
+
+}
+
+.kalkbrud {
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    border: solid #ded9d5 8px;
+    flex-grow: 2;
+}
+
+.kalender_container {
+    display: flex;
+}
+
+.kalender {
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-content: center;
+    display: block;
+    margin-left: 30vw;
+}
+
+@media only screen and (max-width:725px) {
+
+    .kalender {
+        width: 100vw;
+        height: 80vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        margin-left: 0vw;
+    }
+}
+
+.overskrifter {
+    padding-top: 14.5vw;
+    font-size: 2.4rem;
+    font-family: limeStone, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width:725px) {
+
+    .overskrifter {
+        padding-top: 46.5vw;
+        font-size: 2.4rem;
+        font-family: limeStone, sans-serif;
+        color: white;
+        text-align: center;
+    }
+}
+
+
+.koldkrigsmuseum_overskrift {
+    font-size: 1.5rem;
+    color: #387288;
+    padding-top: 22.5vw;
+    font-family: limeStone, sans-serif;
+}
+
+.klint_overskrift {
+    font-size: 1.5rem;
+    color: #0082AD;
+    padding-top: 22.5vw;
+    font-family: limeStone, sans-serif;
+}
+
+.kalkbrud_overskrift {
+    font-size: 1.5rem;
+    color: #19A6A2;
+    padding-top: 22.5vw;
+    font-family: limeStone, sans-serif;
+}
+
+
+@media only screen and (max-width:725px) {
+
+    .koldkrigsmuseum_overskrift,
+    .klint_overskrift,
+    .kalkbrud_overskrift {
+        display: none;
+    }
+
+}
+
+#forsidemenu {
+    justify-content: space-around;
+}
+
+viden_flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* media desktop*/
+
+@media only screen and (min-width:725px) {
+
+    .splash {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        height: 40vh;
+        background-size: cover;
+    }
+
+    #forsidemenu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .kalkbrud {
+        display: flex;
+        border: solid #ded9d5 6px;
+        margin-right: 3px;
+    }
+
+    .klint {
+        display: flex;
+        border: solid #ded9d5 6px;
+    }
+
+    .koldkrig {
+        display: flex;
+        border: solid #ded9d5 6px;
+        margin-left: 3px;
+    }
+
+
+
+}
+
+/*---------viden----------*/
+
+.overskrift1,
+.overskrift2,
+.overskrift3,
+.overskrift4 {
+    font-family: limeStone, sans-serif;
+    font-size: 3rem;
+    padding-top: 50px;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+.indhold1,
+.indhold2,
+.indhold3,
+.indhold4 {
+    font-family: limeStone, sans-serif;
+    line-height: 30px;
+    padding-left: 6vw;
+    padding-right: 6vw;
+
+}
+
+.overskrift1 {
+    border-bottom: solid 2px #a59a90;
+
+}
+
+.overskrift2 {
+    border-bottom: solid 2px #a59a90;
+
+}
+
+.overskrift3 {
+    border-bottom: solid 2px #a59a90;
+
+
+}
+
+.overskrift4 {
+    border-bottom: solid 2px #a59a90;
+}
+
+.hold {
+    padding: 4vw 16vw;
+    line-height: 35px;
+    background-color:
+}
+
+.hold h2:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/*------------menu---------*/
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-family: limeStone, sans-serif;
+    background-color: #8d8277;
+}
+
+.kold_menu {
+    background-color: #387288;
+}
+
+.klint_menu {
+    background-color: #0082AD;
+}
+
+.faxe_menu {
+    background-color: #19A6A2;
+}
+
+.viden_menu {
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 9.5vw 0 9.5vw;
+    font-size: 1.4rem;
+}
+
+.ned_menu a:hover {
+    color: #8d8277;
+    text-decoration: none;
+    font-family: limeStone-Heavy, sans-serif;
+}
+
+.valg {
+    border-bottom: solid 3px white;
+    margin-bottom: 6px;
+}
+
+.besoeg_os {
+    padding: 10px;
+
+}
+
+.besoeg_os valg {
+    padding: 10px;
+
+}
+
+.priser {
+    padding: 10px;
+
+}
+
+.undervisning {
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 720px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu a {
+        margin: 2vw;
+    }
+}
+
+
+/*------------tekst og knap---------*/
+
+.tekst_knap {}
+
+.knap {
+    text-align: center;
+}
+
+.knap img {
+    width: 50vw;
+}
+
+
+/*---------- media queries ------------*/
+
+/*-------- Desktop ---------*/
+
+
+@media screen and (min-width: 1200px) {
+
+    .tekst_knap {
+        display: flex;
+    }
+
+}
+
+
+/*-------- koldkrig, besøg os ---------*/
+
+
+.indhold {
+    padding: 0vw 16vw 2vw 16vw;
+    line-height: 35px;
+    background-color: white;
+}
+
+.indhold h2 {
+    font-size: 36px;
+    font-family: limeStone-Light, sans-serif;
+
+}
+
+.indhold h3 {
+    font-size: 26px;
+    font-family: limeStone, sans-serif;
+}
+
+.indhold h4 {
+    font-size: 24px;
+}
+
+.indhold p {
+    font-size: 20px;
+    font-family: arial;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    padding: 0vw 16vw 2vw 16vw;
+    background-color: white;
+
+}
+
+
+/*------footer--------*/
+
+footer {
+    background-color: #A59A90;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 5vw 3vw 5vw;
+}
+
+.kontakt {
+    font-family: limeStone, sans-serif;
+    line-height: 23px;
+}
+
+#om_os {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.some {
+    display: flex;
+}
+
+.facebook {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(pics/facebook.png);
+    width: 4vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 1vw;
+}
+
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(pics/instagram.png);
+    width: 4vw;
+    height: 8vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*    margin: 3px;*/
+}
+
+@media screen and (max-width: 700px) {
+
+    .kontakt {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+
+    }
+
+    #om_os {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5vh;
+        text-align: center;
+
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .some {
+        display: flex;
+        justify-content: center;
+    }
+
+    .facebook {
+        display: flex;
+        flex-basis: 1;
+        width: 15vw;
+        height: 9vh;
+        margin-top: 1vw;
+    }
+
+    .instagram {
+        display: flex;
+        width: 15vw;
+        height: 9vh;
+        margin-top: 1vw;
+    }
+}
+
+
+/*------kalklandet overskrift----------*/
+
+.heavy,
+.light {
+    flex-basis: 200px;
+    flex-grow: 1;
+
+    flex-direction: row;
+}
+
+.body_forside_skrift {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: default;
+}
+
+.forside_skrift h1 {
+    display: flex;
+    color: white;
+    font-family: limeStone-Light, sans-serif;
+    overflow: hidden;
+    font-size: 5rem;
+    letter-spacing: .5em;
+    margin-top: 15vh;
+    animation:
+        typing 1.5s steps(30, end),
+        blink-caret 30s step-end infinite;
+}
+
+.forside_skrift p {
+    font-family: Limestone-Heavy, sans-serif;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .forside_skrift h1 {
+        display: flex;
+        color: white;
+        font-family: limeStone-Light, sans-serif;
+        overflow: hidden;
+        font-size: 1.9rem;
+        letter-spacing: .5em;
+        margin-top: 12%;
+        animation:
+            typing 1.5s steps(30, end),
+            blink-caret 30s step-end infinite;
+    }
+
+    .forside_skrift p {
+        line-height: 30px;
+        font-family: Limestone-Heavy, sans-serif;
+    }
+}
+
+/*--------kalender------------*/
+
+#screen {
+    height: auto;
+}
+
+.hide_kalender {
+    display: none;
+}
+
+#billede1 {
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100%;
+    top: 22vw;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 86vw;
+    height: 40vw;
+
+}
+
+#frem1 {
+    background-image: url(pics/pil_frem.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1.8vw;
+    height: 10vw;
+    left: 94vw;
+    top: -14vw;
+    cursor: pointer;
+
+}
+
+#tilbage1 {
+
+    background-image: url(pics/pil_tilbage.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1.8vw;
+    height: 10vw;
+    left: 94vw;
+    top: -25vw;
+    cursor: pointer;
+}
+
+
+#billede2 {
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100%;
+    top: 22vw;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 86vw;
+    height: 40vw;
+}
+
+#frem2 {
+
+    background-image: url(pics/pil_frem.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1.8vw;
+    height: 10vw;
+    left: 94vw;
+    top: -14vw;
+    cursor: pointer;
+
+}
+
+#tilbage2 {
+
+    background-image: url(pics/pil_tilbage.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1.8vw;
+    height: 10vw;
+    left: 3vw;
+    top: -25vw;
+    cursor: pointer;
+}
+
+
+
+#billede3 {
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100%;
+    top: 22vw;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 86vw;
+    height: 40vw;
+
+}
+
+#frem3 {
+    background-image: url(pics/pil_frem.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1.8vw;
+    height: 10vw;
+    left: 94vw;
+    top: -8vw;
+    cursor: pointer;
+
+}
+
+#tilbage3 {
+
+    background-image: url(pics/pil_tilbage.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1.8vw;
+    height: 10vw;
+    left: 3vw;
+    top: -19vw;
+    cursor: pointer;
+
+}
+
+/*------kalender-link--------*/
+
+.kalender_link {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+}
+
+.valgt {
+    color: #8d8277;
+
+}
+
+/*----------pil----------*/
+
+
+.scroll {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 160px;
+}
+
+.arrow {
+    position: absolute;
+    top: 18em;
+    left: 6px;
+    height: 40px;
+    width: 6px;
+    background: #ffff;
+    animation: animatatus 2s infinite;
+
+}
+
+.arrow:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 6px solid #ffff;
+    border-right: 6px solid #ffff;
+    transform: rotate(45deg);
+}
+
+@keyframes animatatus {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(80px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(160px);
+        opacity: 0;
+    }
+
+}

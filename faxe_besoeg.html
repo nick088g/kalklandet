@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Geomuseum Faxe kulkbrud besoeg os">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”description” content=”Oplev Kalklandet - Vi har oplevelser som rækker udover den gængse museumsoplevelse. Vi tilbyder natur- og kulturhistorie i verdensklasse, som ikke findes andre steder. Mærk, føl og oplev vores univers sammen med dine nærmeste.”>
+    <meta name="keywords" content="faxe kalkbrud,kalklandet,pris,fossil,geomuseum faxe">
+    <title>Geomuseum Faxe kulkbrud besoeg os</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div id="header">
+        <div class="left">
+            <a href="index.html">
+                <div class="logo">
+                </div>
+            </a>
+        </div>
+        <div class="rigth">
+            <!--
+            <div class="search">
+                <p>Søg</p>
+            </div>
+-->
+            <div class="burgermenu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="box hide">
+                <div class="ned_menu">
+                    <a href="koldkrig_besoeg.html">
+                        <div class="koldkrigsmuseet">Koldkrigsmuseum Stevnsfort</div>
+                    </a>
+                    <a href="klint_besoeg.html">
+                        <div class="stevns_klint">Stevns Klint</div>
+                    </a>
+                    <a href="faxe_besoeg.html">
+                        <div class="geomuseum_faxe valgt">Geomuseum Faxe</div>
+                    </a>
+                    <a href="viden.html">
+                        <div class="viden">Historie</div>
+                    </a>
+                    <a href="index.html#screen">
+                        <div class="kalender_ikon">
+                        </div>
+                        <div class="kalender_tekst hide_kal">Kalender</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="splash">
+        <div class="splash_ani">
+            <div class="border_animation">
+                <a href="#">GEOMUSEUM FAXE</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu faxe_menu">
+
+        <a href="faxe_besoeg.html">
+            <div class="besoeg_os valg">Besøg os</div>
+        </a>
+        <a href="faxe_priser.html">
+            <div class="priser">Priser og guidede ture</div>
+        </a>
+        <a href="faxe_undervisning.html">
+            <div class="undervisning">Undervisning</div>
+        </a>
+    </div>
+
+    <div class="overskriftkalk">
+        <!--Her er classen som vi henter vores overskrift til via REST API-->
+        <h1></h1>
+    </div>
+
+    <div class="indhold">
+        <!--Her er classen som vi henter vores dynamiske indhold til via REST API-->
+    </div>
+
+    <div id="map" class="indhold">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2273.8592799067246!2d12.12083811610297!3d55.25566688042339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652e83d6e71e22f%3A0xe83915a92cc99a34!2sGeomuseum+Faxe!5e0!3m2!1sda!2sdk!4v1556872805371!5m2!1sda!2sdk" width="1000" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    </div>
+
+    <footer>
+        <div class="kontakt">
+            <div>
+                <p>Østsjællands Museum</p>
+                <p>Rådhusvej 2</p>
+                <p>4640 Faxe</p>
+                <p>museum@oesm.dk</p>
+                <p>+45 56502806</p>
+                <p>Telefontid: hverdage kl. 9-15</p>
+                <div class="some">
+                    <a href="https://www.facebook.com/stevnsklint/">
+                        <div class="facebook"></div>
+                    </a>
+                    <a href="https://www.instagram.com/oestsjaellandsmuseum/?hl=da">
+                        <div class="instagram"></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div id="om_os">
+            <h3>Om os</h3>
+            <p>Historie</p>
+            <p>Hvem er vi?</p>
+            <p>Vores opgaver</p>
+            <p>Vores resultater</p>
+            <p>Ledige stillinger</p>
+        </div>
+    </footer>
+
+    <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/faxe/38";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".overskriftkalk h1").innerHTML = splash.title.rendered;
+                document.querySelector(".indhold").innerHTML = splash.content.rendered;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.geomuseum_splashbillede.guid + ")"
+            }
+
+            getJson();
+            sidenVises();
+        }
+
+        function sidenVises() {
+            console.log("siden vises");
+            //Hvad der skal ske
+            showStart();
+        }
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu); //Eventlistener til tryk på burgermenuen videre til funktionen visMenu
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide"); //hide bliver taget fra box
+            document.querySelector(".burgermenu").classList.toggle("change"); //barene flytter sig i burgermenuen - vha toggle
+            document.querySelector(".burgermenu").addEventListener("click", showStart); //ved klik på burgermenuen går til den forrige funktion showStart og er klar til igen at åbne
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Stevns Klint UNESCO verdensarv">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stevns Klint UNESCO verdensarv</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div id="header">
+        <div class="left">
+            <a href="index.html">
+                <div class="logo">
+                </div>
+            </a>
+        </div>
+        <div class="rigth">
+            <!--
+            <div class="search">
+                <p>Søg</p>
+            </div>
+-->
+            <div class="burgermenu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="box hide">
+                <div class="ned_menu">
+                    <a href="koldkrig_besoeg.html">
+                        <div class="koldkrigsmuseet">Koldkrigsmuseet</div>
+                    </a>
+                    <a href="klint_besoeg.html">
+                        <div class="klint_besoeg valgt">Stevns Klint</div>
+                    </a>
+                    <a href="klint_besoeg.html">
+                        <div class="geomuseum_faxe ">Geomuseum Faxe</div>
+                    </a>
+                    <a href="viden.html">
+                        <div class="viden">Kalklandets historie</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="splash">
+        <div class="body_forside_skrift">
+            <div class="forside_skrift">
+                <h1>StevnsKlint</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu klint_menu">
+
+        <a href="klint_besoeg.html">Besøg os</a>
+        <a href="klint_priser.html">Priser og guidede ture</a>
+        <a href="klint_undervisning.html">Undervisning</a>
+    </div>
+
+    <div class="indhold">
+
+    </div>
+
+    <div class="kalender_link">
+        <div class="kalender_tekst">
+            <p>Find vores kalender her</p>
+        </div>
+        <div class="kalender_knap"><a href="index.html#slide_show">KALENDER</a></div>
+    </div>
+
+
+    <footer>
+        <div class="kontakt">
+            <div>
+                <p>Østsjællands Museum</p>
+                <p>Rådhusvej 2</p>
+                <p>4640 Faxe</p>
+                <p>museum@oesm.dk</p>
+                <p>+45 56502806</p>
+                <p>Telefontid: hverdage kl. 9-15</p>
+                <div class="some">
+                    <a href="https://www.facebook.com/stevnsklint/">
+                        <div class="facebook"></div>
+                    </a>
+                    <a href="https://www.instagram.com/oestsjaellandsmuseum/?hl=da">
+                        <div class="instagram"></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div id="om_os">
+            <h3>Om os</h3>
+            <p>Historie</p>
+            <p>Hvem er vi?</p>
+            <p>Vores opgaver</p>
+            <p>Vores resultater</p>
+            <p>Ledige stillinger</p>
+        </div>
+    </footer>
+
+    <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/klint/46";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                //                document.querySelector(".overskrift").innerHTML = splash.title.rendered;
+                document.querySelector(".indhold").innerHTML = splash.content.rendered;
+                //                document.querySelector(".splash").style.backgroundImage = "url(" + splash.klint_splashbillede.guid + ")"
+
+
+            }
+
+            getJson();
+            sidenVises();
+        }
+
+        function sidenVises() {
+            console.log("siden vises");
+            //Hvad der skal ske
+            showStart();
+        }
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu);
+
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide");
+            document.querySelector(".burgermenu").classList.toggle("change");
+            document.querySelector(".burgermenu").addEventListener("click", showStart);
+        }
+    </script>
+</body>
+
+</html>
