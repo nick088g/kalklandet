@@ -155,7 +155,7 @@ h4 {
     background-position: center;
 }
 
-@media only screen and (max-width:725px) {
+@media only screen and (max-width:1025px) {
 
     .splash_height {
         height: 22vh;
@@ -203,7 +203,7 @@ h4 {
     margin: 0;
     padding: 0;
     background: #8d8277;
-    font-family: Limestone, sans-serif;
+
 }
 
 .border_animation {
@@ -272,7 +272,7 @@ h4 {
         margin: 0;
         padding: 0;
         background: #8d8277;
-        font-family: Limestone, sans-serif;
+
     }
 
     .border_animation_kk {
@@ -295,6 +295,7 @@ h4 {
         display: inline-block;
         font-size: 66px;
         color: white;
+        font-family: LimeStone, sans-serif;
     }
 
     .splash_ani_kk a:before {
@@ -436,15 +437,20 @@ h4 {
 
     .box {
         /*Boksen som linksene ligger i */
+
+        /*
         height: 195px;
         width: 200px;
+*/
+        height: auto;
+        width: auto;
         background-color: rgba(222, 217, 213, 0.97);
         z-index: 1;
     }
 
     .burgermenu {
         cursor: pointer;
-        margin-left: 165px;
+        margin-left: 44vw;
     }
 
     .ned_menu {
@@ -701,9 +707,6 @@ viden_flex {
 .indhold4 {
     font-family: limeStone, sans-serif;
     line-height: 30px;
-    padding-left: 6vw;
-    padding-right: 6vw;
-
 }
 
 .overskrift1 {
@@ -727,8 +730,8 @@ viden_flex {
 }
 
 .hold {
-    padding: 4vw 16vw;
-    line-height: 35px;
+    padding: 2.5vw 16vw;
+    line-height: 32px;
     background-color:
 }
 
@@ -841,7 +844,7 @@ viden_flex {
 }
 
 
-/*-------- koldkrig, besøg os ---------*/
+/*-------- opsætning af indhold ---------*/
 
 
 .indhold {
@@ -875,8 +878,18 @@ viden_flex {
     justify-content: center;
     width: 100vw;
     height: auto;
-    padding: 0vw 16vw 2vw 16vw;
+    padding: 0vw 16vw 4vw 16vw;
     background-color: white;
+}
+
+@media only screen and (max-width:725px) {
+
+
+    .indhold {
+        padding: 0vw 7vw 2vw 7vw;
+        line-height: 35px;
+        background-color: white;
+    }
 
 }
 
@@ -887,7 +900,7 @@ footer {
     background-color: #A59A90;
     display: flex;
     justify-content: space-between;
-    padding: 3vw 5vw 3vw 5vw;
+    padding: 2vw 4vw 2vw 4vw;
 }
 
 .kontakt {
@@ -898,7 +911,8 @@ footer {
 #om_os {
     display: flex;
     flex-direction: column;
-
+    line-height: 23px;
+    font-family: limeStone, sans-serif;
 }
 
 .some {
@@ -939,7 +953,7 @@ footer {
     #om_os {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 5vh;
+        padding-top: 2vh;
         text-align: center;
 
     }
@@ -948,7 +962,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        align-content: center;
+        align-items: center;
     }
 
     .some {
@@ -1080,7 +1094,7 @@ footer {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    width: 1.8vw;
+    width: 2.4vw;
     height: 10vw;
     left: 94vw;
     top: -14vw;
@@ -1094,7 +1108,7 @@ footer {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    width: 1.8vw;
+    width: 2.4vw;
     height: 10vw;
     left: 94vw;
     top: -25vw;
@@ -1119,7 +1133,7 @@ footer {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    width: 1.8vw;
+    width: 2.4vw;
     height: 10vw;
     left: 94vw;
     top: -14vw;
@@ -1133,7 +1147,7 @@ footer {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    width: 1.8vw;
+    width: 2.4vw;
     height: 10vw;
     left: 3vw;
     top: -25vw;
@@ -1146,7 +1160,7 @@ footer {
     background-repeat: no-repeat;
     position: relative;
     background-size: 100%;
-    top: 22vw;
+    top: 21.85vw;
     left: 50vw;
     transform: translate(-50%, -50%);
     width: 86vw;
@@ -1159,7 +1173,7 @@ footer {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    width: 1.8vw;
+    width: 2.4vw;
     height: 10vw;
     left: 94vw;
     top: -8vw;
@@ -1173,10 +1187,10 @@ footer {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-    width: 1.8vw;
+    width: 2.4vw;
     height: 10vw;
     left: 3vw;
-    top: -19vw;
+    top: -15vw;
     cursor: pointer;
 
 }
