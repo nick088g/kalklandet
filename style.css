@@ -21,7 +21,7 @@ img {
 a {
     text-decoration: none;
     color: black;
-    font-family: limeStone-Regular, sans-serif;
+    font-family: LimeStone, sans-serif;
 }
 
 a:hover {
@@ -35,14 +35,14 @@ ul {
 }
 
 h1 {
-    font-family: limeStone-Light, sans-serif;
+    font-family: LimeStone-Light, sans-serif;
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 2rem;
 }
 
 h2 {
-    font-family: limeStone-Light, sans-serif;
+    font-family: imeStone-Light, sans-serif;
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 1.7rem;
@@ -50,14 +50,14 @@ h2 {
 
 
 h3 {
-    font-family: limeStone-Bold, sans-serif;
+    font-family: LimeStone-Bold, sans-serif;
     padding-top: 18px;
     padding-bottom: 10px;
     font-size: 1.2rem;
 }
 
 h4 {
-    font-family: limeStone-Bold, sans-serif;
+    font-family: LimeStone-Bold, sans-serif;
     padding-top: 18px;
     padding-bottom: 10px;
 }
@@ -155,7 +155,7 @@ h4 {
     background-position: center;
 }
 
-@media only screen and (max-width:1025px) {
+@media only screen and (max-width:725px) {
 
     .splash_height {
         height: 22vh;
@@ -167,12 +167,12 @@ h4 {
         width: 100vw;
         height: 100px;
         text-align: center;
-        /*            line-height: 50px;*/
         display: inline-block;
         font-size: 30px;
         color: white;
         top: -11vw;
         bottom: -30vw;
+        line-height: 5px;
     }
 
     .border_animation {
@@ -222,10 +222,11 @@ h4 {
     height: 140px;
     top: -10px;
     text-align: center;
-    line-height: 1px;
+    line-height: 12px;
     display: inline-block;
-    font-size: 78px;
+    font-size: 66px;
     color: white;
+    font-family: LimeStone, sans-serif;
 }
 
 .splash_ani a:before {
@@ -291,7 +292,7 @@ h4 {
         height: 140px;
         top: -10px;
         text-align: center;
-        line-height: 1px;
+        line-height: 12px;
         display: inline-block;
         font-size: 66px;
         color: white;
@@ -326,6 +327,7 @@ h4 {
         color: white;
         top: -22vw;
         bottom: -30vw;
+        line-height: 38px
     }
 
     .border_animation_kk {
@@ -437,15 +439,21 @@ h4 {
 
     .box {
         /*Boksen som linksene ligger i */
-
-        /*
-        height: 195px;
-        width: 200px;
-*/
-        height: auto;
+        height: 57.3vw;
         width: auto;
         background-color: rgba(222, 217, 213, 0.97);
         z-index: 1;
+
+
+        position: absolute;
+        margin: 12vw 0vw 0vw 5vw;
+        border-radius: 2vw;
+    }
+
+    .valgt {
+        color: white;
+        font-family: LimeStone-Heavy, sans-serif;
+        font-size: 1.2rem;
     }
 
     .burgermenu {
@@ -463,7 +471,7 @@ h4 {
     .ned_menu a {
         font-size: 1.1rem;
         margin: 0.25rem;
-        padding: 0.15rem;
+        padding: 0.35rem;
         text-decoration: none;
         color: #776C60;
     }
@@ -499,6 +507,22 @@ h4 {
 
     .hide_kal {
         display: block;
+    }
+}
+
+@media only screen and (max-width:320px) {
+
+    .box {
+        /*Boksen som linksene ligger i */
+        height: 62vw;
+        width: auto;
+        background-color: rgba(222, 217, 213, 0.97);
+        z-index: 1;
+
+
+        position: absolute;
+        margin: 12vw 0vw 0vw 5vw;
+        border-radius: 2vw;
     }
 }
 
@@ -592,7 +616,7 @@ h4 {
 .overskrifter {
     padding-top: 14.5vw;
     font-size: 2.4rem;
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
     color: white;
     text-align: center;
 }
@@ -602,7 +626,7 @@ h4 {
     .overskrifter {
         padding-top: 46.5vw;
         font-size: 2.4rem;
-        font-family: limeStone, sans-serif;
+        font-family: LimeStone, sans-serif;
         color: white;
         text-align: center;
     }
@@ -613,21 +637,21 @@ h4 {
     font-size: 1.5rem;
     color: #387288;
     padding-top: 22.5vw;
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
 }
 
 .klint_overskrift {
     font-size: 1.5rem;
     color: #0082AD;
     padding-top: 22.5vw;
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
 }
 
 .kalkbrud_overskrift {
     font-size: 1.5rem;
     color: #19A6A2;
     padding-top: 22.5vw;
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
 }
 
 
@@ -694,19 +718,11 @@ viden_flex {
 .overskrift2,
 .overskrift3,
 .overskrift4 {
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
     font-size: 3rem;
     padding-top: 50px;
     padding-left: 6vw;
     padding-right: 6vw;
-}
-
-.indhold1,
-.indhold2,
-.indhold3,
-.indhold4 {
-    font-family: limeStone, sans-serif;
-    line-height: 30px;
 }
 
 .overskrift1 {
@@ -775,7 +791,7 @@ viden_flex {
 .ned_menu a:hover {
     color: #8d8277;
     text-decoration: none;
-    font-family: limeStone-Heavy, sans-serif;
+    font-family: LimeStone-Heavy, sans-serif;
 }
 
 .valg {
@@ -855,13 +871,12 @@ viden_flex {
 
 .indhold h2 {
     font-size: 36px;
-    font-family: limeStone-Light, sans-serif;
+    font-family: LimeStone-Light, sans-serif;
 
 }
 
 .indhold h3 {
     font-size: 26px;
-    font-family: limeStone, sans-serif;
 }
 
 .indhold h4 {
@@ -904,7 +919,7 @@ footer {
 }
 
 .kontakt {
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
     line-height: 23px;
 }
 
@@ -912,7 +927,7 @@ footer {
     display: flex;
     flex-direction: column;
     line-height: 23px;
-    font-family: limeStone, sans-serif;
+    font-family: LimeStone, sans-serif;
 }
 
 .some {
@@ -1003,6 +1018,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     cursor: default;
+    font-family: LimeStone-Light, sans-serif;
 }
 
 .forside_skrift h1 {
@@ -1019,7 +1035,7 @@ footer {
 }
 
 .forside_skrift p {
-    font-family: Limestone-Heavy, sans-serif;
+    font-family: LimeStone-Heavy, sans-serif;
 }
 
 /* The typing effect */
@@ -1070,7 +1086,7 @@ footer {
 /*--------kalender------------*/
 
 #screen {
-    height: auto;
+    height: 46vw;
 }
 
 .hide_kalender {
@@ -1084,9 +1100,8 @@ footer {
     top: 22vw;
     left: 50vw;
     transform: translate(-50%, -50%);
-    width: 86vw;
+    width: 85vw;
     height: 40vw;
-
 }
 
 #frem1 {
@@ -1099,7 +1114,6 @@ footer {
     left: 94vw;
     top: -14vw;
     cursor: pointer;
-
 }
 
 #tilbage1 {
@@ -1123,7 +1137,7 @@ footer {
     top: 22vw;
     left: 50vw;
     transform: translate(-50%, -50%);
-    width: 86vw;
+    width: 85vw;
     height: 40vw;
 }
 
@@ -1168,19 +1182,6 @@ footer {
 
 }
 
-#frem3 {
-    background-image: url(pics/pil_frem.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 2.4vw;
-    height: 10vw;
-    left: 94vw;
-    top: -8vw;
-    cursor: pointer;
-
-}
-
 #tilbage3 {
 
     background-image: url(pics/pil_tilbage.svg);
@@ -1195,6 +1196,35 @@ footer {
 
 }
 
+@media only screen and (max-width:725px) {
+    #screen {
+        height: 46vw;
+    }
+
+    #frem1,
+    #frem2 {
+        width: 7vw;
+        height: 10vw;
+        left: 92vw;
+        top: -20vw;
+    }
+
+    #tilbage3 {
+        width: 7vw;
+        height: 10vw;
+        left: 1vw;
+        top: -20vw;
+    }
+
+    #tilbage2 {
+        width: 7vw;
+        height: 10vw;
+        left: 1vw;
+        top: -30vw;
+    }
+
+}
+
 /*------kalender-link--------*/
 
 .kalender_link {
@@ -1206,8 +1236,13 @@ footer {
 
 }
 
-.valgt {
-    color: #8d8277;
+@media only screen and (min-width:725px) {
+
+    .valgt {
+        color: white;
+        font-family: LimeStone-Heavy, sans-serif;
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -1225,12 +1260,12 @@ footer {
 
 .arrow {
     position: absolute;
-    top: 18em;
+    top: 21em;
     left: 6px;
     height: 40px;
     width: 6px;
     background: #ffff;
-    animation: animatatus 2s infinite;
+    animation: animatatus 2.4s infinite;
 
 }
 
@@ -1253,13 +1288,20 @@ footer {
     }
 
     50% {
-        transform: translateY(80px);
+        transform: translateY(70px);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(160px);
+        transform: translateY(120px);
         opacity: 0;
     }
 
+}
+
+@media only screen and (max-width:725px) {
+
+    .arrow {
+        display: none;
+    }
 }
