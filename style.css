@@ -524,6 +524,21 @@ h4 {
         margin: 12vw 0vw 0vw 5vw;
         border-radius: 2vw;
     }
+
+    .forside_skrift h1 {
+        display: flex;
+        color: white;
+        font-family: limeStone-Light, sans-serif;
+        overflow: hidden;
+        font-size: 1.7rem;
+        letter-spacing: .5em;
+        margin-top: 12%;
+        animation:
+            typing 1.5s steps(30, end),
+            blink-caret 30s step-end infinite;
+    }
+
+
 }
 
 /*----------hovedmenu---------*/
@@ -1080,6 +1095,22 @@ footer {
     .forside_skrift p {
         line-height: 30px;
         font-family: Limestone-Heavy, sans-serif;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .forside_skrift h1 {
+        display: flex;
+        color: white;
+        font-family: limeStone-Light, sans-serif;
+        overflow: hidden;
+        font-size: 1.7rem;
+        letter-spacing: .5em;
+        margin-top: 12%;
+        animation:
+            typing 1.5s steps(30, end),
+            blink-caret 30s step-end infinite;
     }
 }
 
